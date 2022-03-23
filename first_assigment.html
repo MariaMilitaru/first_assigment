@@ -7,6 +7,8 @@
         <!-- bootstrap -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <!-- fontawesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="first_assigment.css" type="text/css" rel="stylesheet" /> 
     </head>   
 <body>
@@ -33,10 +35,10 @@
 
         <div class="btn-group btn-group-justified col-12">
             <div class="btn-group col-6" >
-                <button class="btn btn-primary btn-lg " id="encrypt_btn" type="submit">Encrypt message</button>
+                <button class="btn btn-primary btn-lg " id="encrypt_btn" type="submit"><i class="fa fa-lock" aria-hidden="true"></i> Encrypt</button>
             </div>
             <div class="btn-group col-6">
-                <button class="btn btn-secondary btn-lg " id="decrypt_btn" type="submit">Decrypt message</button>
+                <button class="btn btn-secondary btn-lg " id="decrypt_btn" type="submit"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Decrypt </i></button>
             </div>
         </div>
 
@@ -45,12 +47,11 @@
             <textarea class="form-control input-lg  " rows="5"  id="final" ></textarea>
         </div>
         <div class="col-12">
-            <button type="button" id="copy" class="btn btn-success btn-lg col-4 ">Copy Message</button>
+            <button type="button" id="copy_btn" class="btn btn-success btn-lg col-5 "><i class="fa fa-clone"></i> Copy Text</button>
         </div>
         
 
-       
-    
+        
     </div>
     <script src="first_assigment.js"></script>
 </body>

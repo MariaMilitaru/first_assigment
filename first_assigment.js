@@ -15,12 +15,22 @@ const sum = (message,key) => {
     message = toIndex(message);
     key = toIndex(key);
     if(message.length == key.length){
-        return message.map((num, idx) => num + key[idx]);
+        return message.map((num, idx) => (num + key[idx])%52);
     }
     if(key.length < message.length){
-        return message.map((num, idx) => num + key[idx % key.length]);
+        return message.map((num, idx) => (num + key[idx % key.length])%52);
+    } 
+}
+
+const reduce = (message,key) => {
+    message = toIndex(message);
+    key = toIndex(key);
+    if(message.length == key.length){
+        return message.map((num, idx) => num - key[idx]);
     }
-    
+    if(key.length < message.length){
+        return message.map((num, idx) => num - key[idx % key.length]);
+    } 
 }
 
 const encryptMessage = (message, key) => {
@@ -29,7 +39,8 @@ const encryptMessage = (message, key) => {
 }
 
 const decryptMessage = (message,key) => {
-    return sum(message,key).join(''); //array to string
+    let newarr = reduce(message,key).map(x => characters[x]);
+    return newarr.join('');  //array to string
 }
  
 
@@ -53,3 +64,6 @@ decrypt_btn.onclick = () => {
     const finalMessage = decryptMessage(message,key);
     document.getElementById("final").value = finalMessage;
 }
+
+
+
