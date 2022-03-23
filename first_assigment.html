@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>First Assigment</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link href="first_assigment.css" type="text/css" rel="stylesheet" /> 
+    </head>   
+<body>
+    <div class="container bg-img ripple-background" >
+        
+        <!-- backgroun animation classes -->
+        <div class='circle xxlarge shade1'></div>
+        <div class='circle xlarge shade2'></div>
+        <div class='circle large shade3'></div>
+        <div class='circle mediun shade4'></div>
+        <div class='circle small shade5'></div>
+        
+        
+        <form>
+            <div class="form-group col-12">
+                <label class="label" for="message">MESSAGE:</label><br>
+                <textarea class="form-control input-lg" rows="5" id="message"  ></textarea><br>
+            </div>
+            <div class="form-group col-md-12"> 
+                <label class="label" for="key">KEY:</label><br>
+                <textarea class="form-control input-lg" rows="5" id="key"></textarea><br>
+            </div>
+        </form>
+
+        <div class="btn-group btn-group-justified col-12">
+            <div class="btn-group col-6" >
+                <button class="btn btn-primary btn-lg " id="encrypt_btn" type="submit">Encrypt message</button>
+            </div>
+            <div class="btn-group col-6">
+                <button class="btn btn-secondary btn-lg " id="decrypt_btn" type="submit">Decrypt message</button>
+            </div>
+        </div>
+
+        <div class="form-group  col-12">
+            <label class="label"for="final">Your decrypted message:</label><br>
+            <textarea class="form-control input-lg  " rows="5"  id="final" ></textarea>
+        </div>
+        <div class="col-12">
+            <button type="button" id="copy" class="btn btn-success btn-lg col-4 ">Copy Message</button>
+        </div>
+        
+
+       
+    
+    </div>
+    <script src="first_assigment.js"></script>
+</body>
+</html>
